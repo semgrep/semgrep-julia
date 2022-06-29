@@ -1,0 +1,47 @@
+File: semgrep-grammars/src/tree-sitter-julia/LICENSE
+Git repo name: tree-sitter-julia
+Latest commit in repo: fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500
+Last change in file:
+  commit 22e8889dc3718099e4dd14feb5930e84cf03fbb1
+  Author: Max Brunsfeld <maxbrunsfeld@gmail.com>
+  Date:   Tue Jul 21 10:27:50 2020 -0700
+  
+      Add mit license file
+---
+File: semgrep-grammars/src/tree-sitter-julia/grammar.js
+Git repo name: tree-sitter-julia
+Latest commit in repo: fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500
+Last change in file:
+  commit fc60b7cce87da7a1b7f8cb0f9371c3dc8b684500
+  Author: Sergio A. Vargas <savargasqu+git@unal.edu.co>
+  Date:   Tue May 31 16:11:51 2022 -0500
+  
+      Update operators and identifiers (#34)
+      
+      - Add more operator types:
+        - Bitshift
+        - Rational
+        - "Dotty"
+      - Fix unary operators:
+        - Add broadcasting dots
+        - Allow unary operators as variables
+        - Parse <unary-op><array> as a unary_expression (not an index
+          expression)
+      - Fix pipe typos (femtolisp uses pipes as raw symbol delimiters).
+      - Simplify `binary_expression` rule.
+      - Make assignment, binary and unary operators visible. Operators that
+        have their own rules (pair, range) are not made visible.
+      - Use unicode categories instead of character ranges for valid
+        identifiers. It allows more characters, and removes some invalid ones.
+      - Update tests.
+---
+File: semgrep-grammars/src/semgrep-julia/grammar.js
+Git repo name: ocaml-tree-sitter-semgrep
+Latest commit in repo: 9fa3de389e401f9d3c40ff470a9e6403cb927a85
+Last change in file:
+  commit 6f507ec5ad06c7261273c0b201db787217f1ba92
+  Author: Avik Sengupta <avik@sengupta.net>
+  Date:   Tue Jun 28 19:59:17 2022 +0100
+  
+      Beginnings of Julia support
+---
