@@ -5,6 +5,8 @@
 enum TokenType {
   BLOCK_COMMENT,
   IMMEDIATE_PAREN,
+  IMMEDIATE_BRACKET,
+  IMMEDIATE_BRACE,
   STRING_START,
   COMMAND_START,
   IMMEDIATE_STRING_START,
@@ -203,8 +205,14 @@ bool tree_sitter_julia_external_scanner_scan(
     TSLexer *lexer,
     const bool *valid_symbols
 ) {
-  if (lexer->lookahead == '(' && valid_symbols[IMMEDIATE_PAREN]) {
+  if (valid_symbols[IMMEDIATE_PAREN] && lexer->lookahead == '(') {
     lexer->result_symbol = IMMEDIATE_PAREN;
+    return true;
+  } else if (valid_symbols[IMMEDIATE_BRACKET] && lexer->lookahead == '[') {
+    lexer->result_symbol = IMMEDIATE_BRACKET;
+    return true;
+  } else if (valid_symbols[IMMEDIATE_BRACE] && lexer->lookahead == '{') {
+    lexer->result_symbol = IMMEDIATE_BRACE;
     return true;
   }
 
