@@ -2,22 +2,11 @@ File: semgrep-grammars/src/tree-sitter-julia/LICENSE
 Git repo name: tree-sitter-julia
 Latest commit in repo: 1cd300bda52e680872053cd55a228c1809cb0c3a
 Last change in file:
-  commit 91ba1c3c9b50f388d4b67518c04bc9a003ed3475
-  Author: Sergio A. Vargas <savargasqu+git@unal.edu.co>
-  Date:   Fri Dec 2 23:15:15 2022 -0500
+  commit 22e8889dc3718099e4dd14feb5930e84cf03fbb1
+  Author: Max Brunsfeld <maxbrunsfeld@gmail.com>
+  Date:   Tue Jul 21 10:27:50 2020 -0700
   
-      Update declarations and assignments (#78)
-      
-      * Update declarations and assignments
-      
-      - Add local and global declarations.
-      - Split `assignment_expression` into two rules:
-        - `assignment`
-        - `compound_assignment_expression`
-      - Fix `assignment` allowing arbitrary expressions in the LHS.
-      - Rename `bare_tuple_expression` to `bare_tuple`.
-      - Add a separate rule for let bindings (these don't allow bare tuples).
-      - Update tests
+      Add mit license file
 ---
 File: semgrep-grammars/src/tree-sitter-julia/grammar.js
 Git repo name: tree-sitter-julia
@@ -60,11 +49,11 @@ Last change in file:
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: f267c028b0cca189e22cdd4e647fb7ebc1d2d522
+Latest commit in repo: a3e31de609deb41f59f0d5ad44d42be4bdf98445
 Last change in file:
-  commit 6f507ec5ad06c7261273c0b201db787217f1ba92
-  Author: Avik Sengupta <avik@sengupta.net>
-  Date:   Tue Jun 28 19:59:17 2022 +0100
+  commit 4ae94e6f1c4e22599fe5128967f24386af7ad240
+  Author: brandonspark <wu.brandonj@gmail.com>
+  Date:   Sat Dec 31 17:36:00 2022 -0500
   
-      Beginnings of Julia support
+      augment julia with ellipsis
 ---

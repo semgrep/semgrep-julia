@@ -12,16 +12,16 @@ type identifier =
   Token.t (* pattern "[_\\p{XID_Start}\226\136\130\226\136\135\226\136\143\226\136\145\194\176\\p{Emoji}&&[^0-9#*]][^\"'`\\s\\.\\-\\[\\]$&,:;@(){}+==*=/=//=\\\\=^=\195\183=%=<<=>>=>>>=|=&=\226\138\187=\226\137\148\226\169\180\226\137\149\226\134\144\226\134\146\226\134\148\226\134\154\226\134\155\226\134\158\226\134\160\226\134\162\226\134\163\226\134\166\226\134\164\226\134\174\226\135\142\226\135\141\226\135\143\226\135\144\226\135\146\226\135\148\226\135\180\226\135\182\226\135\183\226\135\184\226\135\185\226\135\186\226\135\187\226\135\188\226\135\189\226\135\190\226\135\191\226\159\181\226\159\182\226\159\183\226\159\185\226\159\186\226\159\187\226\159\188\226\159\189\226\159\190\226\159\191\226\164\128\226\164\129\226\164\130\226\164\131\226\164\132\226\164\133\226\164\134\226\164\135\226\164\140\226\164\141\226\164\142\226\164\143\226\164\144\226\164\145\226\164\148\226\164\149\226\164\150\226\164\151\226\164\152\226\164\157\226\164\158\226\164\159\226\164\160\226\165\132\226\165\133\226\165\134\226\165\135\226\165\136\226\165\138\226\165\139\226\165\142\226\165\144\226\165\146\226\165\147\226\165\150\226\165\151\226\165\154\226\165\155\226\165\158\226\165\159\226\165\162\226\165\164\226\165\166\226\165\167\226\165\168\226\165\169\226\165\170\226\165\171\226\165\172\226\165\173\226\165\176\226\167\180\226\172\177\226\172\176\226\172\178\226\172\179\226\172\180\226\172\181\226\172\182\226\172\183\226\172\184\226\172\185\226\172\186\226\172\187\226\172\188\226\172\189\226\172\190\226\172\191\226\173\128\226\173\129\226\173\130\226\173\131\226\173\132\226\173\135\226\173\136\226\173\137\226\173\138\226\173\139\226\173\140\239\191\169\239\191\171\226\135\156\226\135\157\226\134\156\226\134\157\226\134\169\226\134\170\226\134\171\226\134\172\226\134\188\226\134\189\226\135\128\226\135\129\226\135\132\226\135\134\226\135\135\226\135\137\226\135\139\226\135\140\226\135\154\226\135\155\226\135\160\226\135\162><>=\226\137\165<=\226\137\164=====\226\137\161=\226\137\160==\226\137\162\226\136\136\226\136\137\226\136\139\226\136\140\226\138\134\226\138\136\226\138\130\226\138\132\226\138\138\226\136\157\226\136\138\226\136\141\226\136\165\226\136\166\226\136\183\226\136\186\226\136\187\226\136\189\226\136\190\226\137\129\226\137\131\226\137\130\226\137\132\226\137\133\226\137\134\226\137\135\226\137\136\226\137\137\226\137\138\226\137\139\226\137\140\226\137\141\226\137\142\226\137\144\226\137\145\226\137\146\226\137\147\226\137\150\226\137\151\226\137\152\226\137\153\226\137\154\226\137\155\226\137\156\226\137\157\226\137\158\226\137\159\226\137\163\226\137\166\226\137\167\226\137\168\226\137\169\226\137\170\226\137\171\226\137\172\226\137\173\226\137\174\226\137\175\226\137\176\226\137\177\226\137\178\226\137\179\226\137\180\226\137\181\226\137\182\226\137\183\226\137\184\226\137\185\226\137\186\226\137\187\226\137\188\226\137\189\226\137\190\226\137\191\226\138\128\226\138\129\226\138\131\226\138\133\226\138\135\226\138\137\226\138\139\226\138\143\226\138\144\226\138\145\226\138\146\226\138\156\226\138\169\226\138\172\226\138\174\226\138\176\226\138\177\226\138\178\226\138\179\226\138\180\226\138\181\226\138\182\226\138\183\226\139\141\226\139\144\226\139\145\226\139\149\226\139\150\226\139\151\226\139\152\226\139\153\226\139\154\226\139\155\226\139\156\226\139\157\226\139\158\226\139\159\226\139\160\226\139\161\226\139\162\226\139\163\226\139\164\226\139\165\226\139\166\226\139\167\226\139\168\226\139\169\226\139\170\226\139\171\226\139\172\226\139\173\226\139\178\226\139\179\226\139\180\226\139\181\226\139\182\226\139\183\226\139\184\226\139\185\226\139\186\226\139\187\226\139\188\226\139\189\226\139\190\226\139\191\226\159\136\226\159\137\226\159\146\226\166\183\226\167\128\226\167\129\226\167\161\226\167\163\226\167\164\226\167\165\226\169\166\226\169\167\226\169\170\226\169\171\226\169\172\226\169\173\226\169\174\226\169\175\226\169\176\226\169\177\226\169\178\226\169\179\226\169\181\226\169\182\226\169\183\226\169\184\226\169\185\226\169\186\226\169\187\226\169\188\226\169\189\226\169\190\226\169\191\226\170\128\226\170\129\226\170\130\226\170\131\226\170\132\226\170\133\226\170\134\226\170\135\226\170\136\226\170\137\226\170\138\226\170\139\226\170\140\226\170\141\226\170\142\226\170\143\226\170\144\226\170\145\226\170\146\226\170\147\226\170\148\226\170\149\226\170\150\226\170\151\226\170\152\226\170\153\226\170\154\226\170\155\226\170\156\226\170\157\226\170\158\226\170\159\226\170\160\226\170\161\226\170\162\226\170\163\226\170\164\226\170\165\226\170\166\226\170\167\226\170\168\226\170\169\226\170\170\226\170\171\226\170\172\226\170\173\226\170\174\226\170\175\226\170\176\226\170\177\226\170\178\226\170\179\226\170\180\226\170\181\226\170\182\226\170\183\226\170\184\226\170\185\226\170\186\226\170\187\226\170\188\226\170\189\226\170\190\226\170\191\226\171\128\226\171\129\226\171\130\226\171\131\226\171\132\226\171\133\226\171\134\226\171\135\226\171\136\226\171\137\226\171\138\226\171\139\226\171\140\226\171\141\226\171\142\226\171\143\226\171\144\226\171\145\226\171\146\226\171\147\226\171\148\226\171\149\226\171\150\226\171\151\226\171\152\226\171\153\226\171\183\226\171\184\226\171\185\226\171\186\226\138\162\226\138\163\226\159\130\226\128\166\226\129\157\226\139\174\226\139\177\226\139\176\226\139\175+|\226\138\149\226\138\150\226\138\158\226\138\159++\226\136\170\226\136\168\226\138\148\194\177\226\136\147\226\136\148\226\136\184\226\137\130\226\137\143\226\138\142\226\138\187\226\138\189\226\139\142\226\139\147\226\167\186\226\167\187\226\168\136\226\168\162\226\168\163\226\168\164\226\168\165\226\168\166\226\168\167\226\168\168\226\168\169\226\168\170\226\168\171\226\168\172\226\168\173\226\168\174\226\168\185\226\168\186\226\169\129\226\169\130\226\169\133\226\169\138\226\169\140\226\169\143\226\169\144\226\169\146\226\169\148\226\169\150\226\169\151\226\169\155\226\169\157\226\169\161\226\169\162\226\169\163*/\195\183%&\226\139\133\226\136\152\195\151\\\\\226\136\169\226\136\167\226\138\151\226\138\152\226\138\153\226\138\154\226\138\155\226\138\160\226\138\161\226\138\147\226\136\151\226\136\153\226\136\164\226\133\139\226\137\128\226\138\188\226\139\132\226\139\134\226\139\135\226\139\137\226\139\138\226\139\139\226\139\140\226\139\143\226\139\146\226\159\145\226\166\184\226\166\188\226\166\190\226\166\191\226\167\182\226\167\183\226\168\135\226\168\176\226\168\177\226\168\178\226\168\179\226\168\180\226\168\181\226\168\182\226\168\183\226\168\184\226\168\187\226\168\188\226\168\189\226\169\128\226\169\131\226\169\132\226\169\139\226\169\141\226\169\142\226\169\145\226\169\147\226\169\149\226\169\152\226\169\154\226\169\156\226\169\158\226\169\159\226\169\160\226\171\155\226\138\141\226\150\183\226\168\157\226\159\149\226\159\150\226\159\151<<>>>>>^\226\134\145\226\134\147\226\135\181\226\159\176\226\159\177\226\164\136\226\164\137\226\164\138\226\164\139\226\164\146\226\164\147\226\165\137\226\165\140\226\165\141\226\165\143\226\165\145\226\165\148\226\165\149\226\165\152\226\165\153\226\165\156\226\165\157\226\165\160\226\165\161\226\165\163\226\165\165\226\165\174\226\165\175\239\191\170\239\191\172]*" *)
 [@@deriving sexp_of]
 
-type tok_0o_pat_c83427c = Token.t
+type tok_0b_pat_1c3450e = Token.t
 [@@deriving sexp_of]
 
 type immediate_brace = Token.t
 [@@deriving sexp_of]
 
-type tok_0b_pat_1c3450e = Token.t
+type times_operator = Token.t
 [@@deriving sexp_of]
 
-type tok_abst_pat_3d340f6_type = Token.t
+type tok_0x_pat_50ed65e = Token.t
 [@@deriving sexp_of]
 
 type assign_operator = Token.t
@@ -33,16 +33,17 @@ type ellipsis_operator = Token.t
 type escape_sequence = Token.t
 [@@deriving sexp_of]
 
-type tok_choice_dot_choice_plus = Token.t
+type tok_choice_dot_choice_barbar = Token.t
 [@@deriving sexp_of]
 
 type comparison_operator = Token.t
 [@@deriving sexp_of]
 
-type string_end = Token.t
+type string_content_no_interp = Token.t
 [@@deriving sexp_of]
 
-type tok_choice_dot_choice_ampamp = Token.t
+type tok_choice_0x_pat_50ed65e_choice_dot_choice_pat_50ed65e_pat_dd04cb4 =
+  Token.t
 [@@deriving sexp_of]
 
 type imm_tok_dot_choice_pat_a25c544_choice_pat_55159f5 = Token.t
@@ -60,7 +61,7 @@ type imm_tok_colon = Token.t (* ":" *)
 type pipe_left_operator = Token.t
 [@@deriving sexp_of]
 
-type tok_dot_pat_a25c544_choice_pat_55159f5 = Token.t
+type tok_choice_dot_choice_plus = Token.t
 [@@deriving sexp_of]
 
 type immediate_bracket = Token.t
@@ -72,19 +73,19 @@ type command_start = Token.t
 type character_literal = Token.t
 [@@deriving sexp_of]
 
-type tok_0x_pat_50ed65e = Token.t
+type tok_0o_pat_c83427c = Token.t
 [@@deriving sexp_of]
 
 type imm_tok_choice_bare = Token.t
 [@@deriving sexp_of]
 
-type tok_choice_dot_choice_barbar = Token.t
-[@@deriving sexp_of]
-
-type unary_operator = Token.t
+type tok_choice_dot_choice_ampamp = Token.t
 [@@deriving sexp_of]
 
 type tok_prim_pat_3d340f6_type = Token.t
+[@@deriving sexp_of]
+
+type tok_pat_a25c544_pat_55159f5 = Token.t
 [@@deriving sexp_of]
 
 type immediate_command_start = Token.t
@@ -93,13 +94,13 @@ type immediate_command_start = Token.t
 type plus_operator = Token.t
 [@@deriving sexp_of]
 
-type tok_pat_a25c544_pat_55159f5 = Token.t
+type unary_operator = Token.t
+[@@deriving sexp_of]
+
+type tok_dot_pat_a25c544_choice_pat_55159f5 = Token.t
 [@@deriving sexp_of]
 
 type pat_4aee1e1 = Token.t (* pattern ;+ *)
-[@@deriving sexp_of]
-
-type times_operator = Token.t
 [@@deriving sexp_of]
 
 type imm_tok_dot = Token.t (* "." *)
@@ -108,11 +109,13 @@ type imm_tok_dot = Token.t (* "." *)
 type immediate_paren = Token.t
 [@@deriving sexp_of]
 
-type tok_choice_0x_pat_50ed65e_choice_dot_choice_pat_50ed65e_pat_dd04cb4 =
-  Token.t
+type tok_abst_pat_3d340f6_type = Token.t
 [@@deriving sexp_of]
 
-type string_content_no_interp = Token.t
+type string_start = Token.t
+[@@deriving sexp_of]
+
+type string_content = Token.t
 [@@deriving sexp_of]
 
 type bitshift_operator = Token.t
@@ -130,7 +133,7 @@ type command_end = Token.t
 type rational_operator = Token.t
 [@@deriving sexp_of]
 
-type string_start = Token.t
+type string_end = Token.t
 [@@deriving sexp_of]
 
 type power_operator = Token.t
@@ -148,19 +151,16 @@ type pat_a25c544 = Token.t (* pattern [0-9]|([0-9][0-9_]*[0-9]) *)
 type immediate_string_start = Token.t
 [@@deriving sexp_of]
 
-type string_content = Token.t
-[@@deriving sexp_of]
-
 type imm_tok_choice_tok_choice_dot_choice_plus = Token.t
-[@@deriving sexp_of]
-
-type terminator = [ `LF of Token.t (* "\n" *) | `Pat_4aee1e1 of pat_4aee1e1 ]
 [@@deriving sexp_of]
 
 type anon_choice_str_content_no_interp_24ac4f9 = [
     `Str_content_no_interp of string_content_no_interp (*tok*)
   | `Esc_seq of escape_sequence (*tok*)
 ]
+[@@deriving sexp_of]
+
+type terminator = [ `LF of Token.t (* "\n" *) | `Pat_4aee1e1 of pat_4aee1e1 ]
 [@@deriving sexp_of]
 
 type operator = [
@@ -480,6 +480,17 @@ and command_literal = (
   * command_end (*tok*)
 )
 
+and compound_assignment_expression = (
+    primary_expression * assign_operator (*tok*) * expression
+)
+
+and compound_statement = (
+    Token.t (* "begin" *)
+  * terminator option
+  * source_file
+  * Token.t (* "end" *)
+)
+
 and comprehension_clause = (
     for_clause
   * Token.t (* "\n" *) option
@@ -616,50 +627,35 @@ and elseif_clause = (
   * source_file
 )
 
+and export_statement = (
+    Token.t (* "export" *)
+  * anon_choice_id_a8b5d0d
+  * (Token.t (* "," *) * anon_choice_id_a8b5d0d) list (* zero or more *)
+)
+
 and expression = [
-    `Choice_module_defi of definition
-  | `Choice_comp_stmt of statement
-  | `Lit of literal
-  | `Prim_exp of primary_expression
-  | `Macr_exp of (
-        (primary_expression * imm_tok_dot (*tok*)) option
-      * macro_identifier
-      * macro_argument_list option
-    )
-  | `Adjo_exp of adjoint_expression
-  | `Un_exp of unary_expression
-  | `Bin_exp of binary_expression
-  | `Range_exp of (expression * imm_tok_colon (*tok*) * expression)
-  | `Splat_exp of (expression * Token.t (* "..." *))
-  | `Tern_exp of (
-        expression * Token.t (* "?" *) * anon_choice_exp_b833738
-      * Token.t (* ":" *) * anon_choice_exp_b833738
-    )
-  | `Typed_exp of typed_expression
-  | `Func_exp of (
-        [
-            `Id of identifier (*tok*)
-          | `Param_list of parameter_list
-          | `Typed_exp of typed_expression
-        ]
-      * Token.t (* "->" *)
-      * anon_choice_exp_3c18676
-    )
-  | `Juxt_exp of (
-        [
-            `Int_lit of integer_literal
-          | `Float_lit of float_literal
-          | `Adjo_exp of adjoint_expression
-        ]
-      * primary_expression
-    )
-  | `Comp_assign_exp of (
-        primary_expression * assign_operator (*tok*) * expression
-    )
-  | `Where_exp of (expression * Token.t (* "where" *) * expression)
-  | `Op of operator
-  | `COLON of Token.t (* ":" *)
-  | `Begin of Token.t (* "begin" *)
+    `Choice_choice_module_defi of [
+        `Choice_module_defi of definition
+      | `Choice_choice_comp_stmt of statement
+      | `Lit of literal
+      | `Prim_exp of primary_expression
+      | `Macr_exp of macrocall_expression
+      | `Adjo_exp of adjoint_expression
+      | `Un_exp of unary_expression
+      | `Bin_exp of binary_expression
+      | `Range_exp of range_expression
+      | `Splat_exp of splat_expression
+      | `Tern_exp of ternary_expression
+      | `Typed_exp of typed_expression
+      | `Func_exp of function_expression
+      | `Juxt_exp of juxtaposition_expression
+      | `Comp_assign_exp of compound_assignment_expression
+      | `Where_exp of where_expression
+      | `Op of operator
+      | `COLON of Token.t (* ":" *)
+      | `Begin of Token.t (* "begin" *)
+    ]
+  | `Semg_ellips of Token.t (* "..." *)
 ]
 
 and field_expression = (
@@ -703,6 +699,25 @@ and for_clause = (
   * (Token.t (* "," *) * for_binding) list (* zero or more *)
 )
 
+and for_statement = (
+    Token.t (* "for" *)
+  * for_binding
+  * (Token.t (* "," *) * for_binding) list (* zero or more *)
+  * terminator option
+  * source_file
+  * Token.t (* "end" *)
+)
+
+and function_expression = (
+    [
+        `Id of identifier (*tok*)
+      | `Param_list of parameter_list
+      | `Typed_exp of typed_expression
+    ]
+  * Token.t (* "->" *)
+  * anon_choice_exp_3c18676
+)
+
 and function_signature = (
     [
         `Id of identifier (*tok*)
@@ -723,11 +738,26 @@ and function_signature = (
   * where_clause list (* zero or more *)
 )
 
+and if_statement = (
+    Token.t (* "if" *)
+  * expression
+  * terminator option
+  * source_file
+  * elseif_clause list (* zero or more *)
+  * else_clause option
+  * Token.t (* "end" *)
+)
+
 and import_alias = (importable * Token.t (* "as" *) * identifier (*tok*))
 
 and import_list = (
     anon_choice_impo_a542259
   * (Token.t (* "," *) * anon_choice_impo_a542259) list (* zero or more *)
+)
+
+and import_statement = (
+    [ `Import of Token.t (* "import" *) | `Using of Token.t (* "using" *) ]
+  * [ `Import_list of import_list | `Sele_import of selected_import ]
 )
 
 and importable = [
@@ -758,11 +788,32 @@ and interpolation_expression = (
   * [ `Lit of literal | `Quot of quotable ]
 )
 
+and juxtaposition_expression = (
+    [
+        `Int_lit of integer_literal
+      | `Float_lit of float_literal
+      | `Adjo_exp of adjoint_expression
+    ]
+  * primary_expression
+)
+
 and keyword_parameters = (
     Token.t (* ";" *)
   * anon_choice_id_687d935
   * (Token.t (* "," *) * anon_choice_id_687d935) list (* zero or more *)
   * Token.t (* "," *) option
+)
+
+and let_statement = (
+    Token.t (* "let" *)
+  * (
+        anon_choice_id_c313bb1
+      * (Token.t (* "," *) * anon_choice_id_c313bb1) list (* zero or more *)
+    )
+      option
+  * terminator
+  * source_file
+  * Token.t (* "end" *)
 )
 
 and literal = [
@@ -784,6 +835,12 @@ and macro_identifier = (
       | `Scoped_id of scoped_identifier
       | `Imm_tok_dot of imm_tok_dot (*tok*)
     ]
+)
+
+and macrocall_expression = (
+    (primary_expression * imm_tok_dot (*tok*)) option
+  * macro_identifier
+  * macro_argument_list option
 )
 
 and matrix_expression = (
@@ -887,6 +944,20 @@ and quote_expression = (
     ]
 )
 
+and quote_statement = (
+    Token.t (* "quote" *)
+  * terminator option
+  * source_file
+  * Token.t (* "end" *)
+)
+
+and range_expression = (expression * imm_tok_colon (*tok*) * expression)
+
+and return_statement = (
+    Token.t (* "return" *)
+  * anon_choice_exp_3c18676 option
+)
+
 and scoped_identifier = (
     anon_choice_id_f1f5a37
   * imm_tok_dot (*tok*)
@@ -915,84 +986,44 @@ and slurp_parameter = (
 
 and source_file = block option
 
+and splat_expression = (expression * Token.t (* "..." *))
+
 and statement = [
-    `Comp_stmt of (
-        Token.t (* "begin" *)
-      * terminator option
-      * source_file
-      * Token.t (* "end" *)
-    )
-  | `Quote_stmt of (
-        Token.t (* "quote" *)
-      * terminator option
-      * source_file
-      * Token.t (* "end" *)
-    )
-  | `Let_stmt of (
-        Token.t (* "let" *)
-      * (
-            anon_choice_id_c313bb1
-          * (Token.t (* "," *) * anon_choice_id_c313bb1)
-              list (* zero or more *)
-        )
-          option
-      * terminator
-      * source_file
-      * Token.t (* "end" *)
-    )
-  | `If_stmt of (
-        Token.t (* "if" *)
-      * expression
-      * terminator option
-      * source_file
-      * elseif_clause list (* zero or more *)
-      * else_clause option
-      * Token.t (* "end" *)
-    )
-  | `Try_stmt of (
-        Token.t (* "try" *)
-      * terminator option
-      * source_file
-      * catch_clause option
-      * finally_clause option
-      * Token.t (* "end" *)
-    )
-  | `For_stmt of (
-        Token.t (* "for" *)
-      * for_binding
-      * (Token.t (* "," *) * for_binding) list (* zero or more *)
-      * terminator option
-      * source_file
-      * Token.t (* "end" *)
-    )
-  | `While_stmt of (
-        Token.t (* "while" *)
-      * expression
-      * terminator option
-      * source_file
-      * Token.t (* "end" *)
-    )
-  | `Brk_stmt of Token.t (* "break" *)
-  | `Cont_stmt of Token.t (* "continue" *)
-  | `Ret_stmt of (Token.t (* "return" *) * anon_choice_exp_3c18676 option)
-  | `Export_stmt of (
-        Token.t (* "export" *)
-      * anon_choice_id_a8b5d0d
-      * (Token.t (* "," *) * anon_choice_id_a8b5d0d) list (* zero or more *)
-    )
-  | `Import_stmt of (
-        [
-            `Import of Token.t (* "import" *)
-          | `Using of Token.t (* "using" *)
-        ]
-      * [ `Import_list of import_list | `Sele_import of selected_import ]
-    )
+    `Choice_comp_stmt of [
+        `Comp_stmt of compound_statement
+      | `Quote_stmt of quote_statement
+      | `Let_stmt of let_statement
+      | `If_stmt of if_statement
+      | `Try_stmt of try_statement
+      | `For_stmt of for_statement
+      | `While_stmt of while_statement
+      | `Brk_stmt of Token.t (* "break" *)
+      | `Cont_stmt of Token.t (* "continue" *)
+      | `Ret_stmt of return_statement
+      | `Export_stmt of export_statement
+      | `Import_stmt of import_statement
+    ]
+  | `Semg_ellips of Token.t (* "..." *)
 ]
 
 and string_literal = (
     string_start (*tok*)
   * anon_choice_str_content_838a78d list (* zero or more *)
   * string_end (*tok*)
+)
+
+and ternary_expression = (
+    expression * Token.t (* "?" *) * anon_choice_exp_b833738
+  * Token.t (* ":" *) * anon_choice_exp_b833738
+)
+
+and try_statement = (
+    Token.t (* "try" *)
+  * terminator option
+  * source_file
+  * catch_clause option
+  * finally_clause option
+  * Token.t (* "end" *)
 )
 
 and tuple_expression = (
@@ -1033,17 +1064,20 @@ and typed_expression = (
   * [ `Prim_exp of primary_expression ]
 )
 
-and typed_parameter = (
-    [
-        `Id of identifier (*tok*)
-      | `Tuple_exp of tuple_expression
-      | `Interp_exp of interpolation_expression
-    ]
-      option
-  * Token.t (* "::" *)
-  * primary_expression
-  * where_clause option
-)
+and typed_parameter = [
+    `Opt_choice_id_COLONCOLON_prim_exp_opt_where_clause of (
+        [
+            `Id of identifier (*tok*)
+          | `Tuple_exp of tuple_expression
+          | `Interp_exp of interpolation_expression
+        ]
+          option
+      * Token.t (* "::" *)
+      * primary_expression
+      * where_clause option
+    )
+  | `Semg_ellips of Token.t (* "..." *)
+]
 
 and unary_expression = (unary_operator (*tok*) * expression)
 
@@ -1059,6 +1093,16 @@ and where_clause = (
   * primary_expression
   * type_clause option
 )
+
+and where_expression = (expression * Token.t (* "where" *) * expression)
+
+and while_statement = (
+    Token.t (* "while" *)
+  * expression
+  * terminator option
+  * source_file
+  * Token.t (* "end" *)
+)
 [@@deriving sexp_of]
 
 type line_comment (* inlined *) = Token.t
@@ -1071,6 +1115,9 @@ type continue_statement (* inlined *) = Token.t (* "continue" *)
 [@@deriving sexp_of]
 
 type block_comment (* inlined *) = Token.t
+[@@deriving sexp_of]
+
+type semgrep_ellipsis (* inlined *) = Token.t (* "..." *)
 [@@deriving sexp_of]
 
 type abstract_definition (* inlined *) = (
@@ -1091,19 +1138,6 @@ type broadcast_call_expression (* inlined *) = (
 )
 [@@deriving sexp_of]
 
-type compound_assignment_expression (* inlined *) = (
-    primary_expression * assign_operator (*tok*) * expression
-)
-[@@deriving sexp_of]
-
-type compound_statement (* inlined *) = (
-    Token.t (* "begin" *)
-  * terminator option
-  * source_file
-  * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
 type const_declaration (* inlined *) = (
     Token.t (* "const" *)
   * [
@@ -1111,23 +1145,6 @@ type const_declaration (* inlined *) = (
       | `Id of identifier (*tok*)
       | `Typed_exp of typed_expression
     ]
-)
-[@@deriving sexp_of]
-
-type export_statement (* inlined *) = (
-    Token.t (* "export" *)
-  * anon_choice_id_a8b5d0d
-  * (Token.t (* "," *) * anon_choice_id_a8b5d0d) list (* zero or more *)
-)
-[@@deriving sexp_of]
-
-type for_statement (* inlined *) = (
-    Token.t (* "for" *)
-  * for_binding
-  * (Token.t (* "," *) * for_binding) list (* zero or more *)
-  * terminator option
-  * source_file
-  * Token.t (* "end" *)
 )
 [@@deriving sexp_of]
 
@@ -1151,63 +1168,12 @@ type function_definition (* inlined *) = (
 )
 [@@deriving sexp_of]
 
-type function_expression (* inlined *) = (
-    [
-        `Id of identifier (*tok*)
-      | `Param_list of parameter_list
-      | `Typed_exp of typed_expression
-    ]
-  * Token.t (* "->" *)
-  * anon_choice_exp_3c18676
-)
-[@@deriving sexp_of]
-
 type global_declaration (* inlined *) = (
     Token.t (* "global" *) * anon_choice_assign_33ef5de
 )
 [@@deriving sexp_of]
 
 type if_clause (* inlined *) = (Token.t (* "if" *) * expression)
-[@@deriving sexp_of]
-
-type if_statement (* inlined *) = (
-    Token.t (* "if" *)
-  * expression
-  * terminator option
-  * source_file
-  * elseif_clause list (* zero or more *)
-  * else_clause option
-  * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
-type import_statement (* inlined *) = (
-    [ `Import of Token.t (* "import" *) | `Using of Token.t (* "using" *) ]
-  * [ `Import_list of import_list | `Sele_import of selected_import ]
-)
-[@@deriving sexp_of]
-
-type juxtaposition_expression (* inlined *) = (
-    [
-        `Int_lit of integer_literal
-      | `Float_lit of float_literal
-      | `Adjo_exp of adjoint_expression
-    ]
-  * primary_expression
-)
-[@@deriving sexp_of]
-
-type let_statement (* inlined *) = (
-    Token.t (* "let" *)
-  * (
-        anon_choice_id_c313bb1
-      * (Token.t (* "," *) * anon_choice_id_c313bb1) list (* zero or more *)
-    )
-      option
-  * terminator
-  * source_file
-  * Token.t (* "end" *)
-)
 [@@deriving sexp_of]
 
 type local_declaration (* inlined *) = (
@@ -1227,13 +1193,6 @@ type macro_definition (* inlined *) = (
   * terminator option
   * source_file
   * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
-type macrocall_expression (* inlined *) = (
-    (primary_expression * imm_tok_dot (*tok*)) option
-  * macro_identifier
-  * macro_argument_list option
 )
 [@@deriving sexp_of]
 
@@ -1269,32 +1228,10 @@ type primitive_definition (* inlined *) = (
 )
 [@@deriving sexp_of]
 
-type quote_statement (* inlined *) = (
-    Token.t (* "quote" *)
-  * terminator option
-  * source_file
-  * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
-type range_expression (* inlined *) = (
-    expression * imm_tok_colon (*tok*) * expression
-)
-[@@deriving sexp_of]
-
 type relative_qualifier (* inlined *) = (
     Token.t (* "." *) list (* one or more *)
   * anon_choice_id_f1f5a37
 )
-[@@deriving sexp_of]
-
-type return_statement (* inlined *) = (
-    Token.t (* "return" *)
-  * anon_choice_exp_3c18676 option
-)
-[@@deriving sexp_of]
-
-type splat_expression (* inlined *) = (expression * Token.t (* "..." *))
 [@@deriving sexp_of]
 
 type string_interpolation (* inlined *) = (
@@ -1315,36 +1252,6 @@ type struct_definition (* inlined *) = (
   * anon_choice_id_00cc266
   * (immediate_brace (*tok*) * curly_expression) option
   * type_clause option
-  * terminator option
-  * source_file
-  * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
-type ternary_expression (* inlined *) = (
-    expression * Token.t (* "?" *) * anon_choice_exp_b833738
-  * Token.t (* ":" *) * anon_choice_exp_b833738
-)
-[@@deriving sexp_of]
-
-type try_statement (* inlined *) = (
-    Token.t (* "try" *)
-  * terminator option
-  * source_file
-  * catch_clause option
-  * finally_clause option
-  * Token.t (* "end" *)
-)
-[@@deriving sexp_of]
-
-type where_expression (* inlined *) = (
-    expression * Token.t (* "where" *) * expression
-)
-[@@deriving sexp_of]
-
-type while_statement (* inlined *) = (
-    Token.t (* "while" *)
-  * expression
   * terminator option
   * source_file
   * Token.t (* "end" *)
