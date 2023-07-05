@@ -406,7 +406,8 @@ and call_expression = (
 
 and catch_clause = (
     Token.t (* "catch" *)
-  * identifier (*tok*) option
+  * [ `Id of identifier (*tok*) | `Semg_ellips of Token.t (* "..." *) ]
+      option
   * terminator option
   * source_file
 )

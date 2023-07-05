@@ -435,7 +435,10 @@ let children_regexps : (string * Run.exp option) list = [
     Seq [
       Token (Literal "catch");
       Opt (
-        Token (Name "identifier");
+        Alt [|
+          Token (Name "identifier");
+          Token (Name "semgrep_ellipsis");
+        |];
       );
       Opt (
         Alt [|
@@ -2970,7 +2973,19 @@ and trans_catch_clause ((kind, body) : mt) : CST.catch_clause =
           (
             Run.trans_token (Run.matcher_token v0),
             Run.opt
-              (fun v -> trans_identifier (Run.matcher_token v))
+              (fun v ->
+                (match v with
+                | Alt (0, v) ->
+                    `Id (
+                      trans_identifier (Run.matcher_token v)
+                    )
+                | Alt (1, v) ->
+                    `Semg_ellips (
+                      trans_semgrep_ellipsis (Run.matcher_token v)
+                    )
+                | _ -> assert false
+                )
+              )
               v1
             ,
             Run.opt

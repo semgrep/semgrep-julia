@@ -49,11 +49,11 @@ Last change in file:
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: e3d08f10f24a29134d65ab519dcc04eec261047b
+Latest commit in repo: 3834add10c746906fad9b7ced540fc2f981aa08c
 Last change in file:
-  commit 4ae94e6f1c4e22599fe5128967f24386af7ad240
+  commit 3834add10c746906fad9b7ced540fc2f981aa08c
   Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Sat Dec 31 17:36:00 2022 -0500
+  Date:   Wed Jul 5 14:00:37 2023 -0400
   
-      augment julia with ellipsis
+      allow ellipsis in catch for julia
 ---
