@@ -1,59 +1,30 @@
 File: semgrep-grammars/src/tree-sitter-julia/LICENSE
 Git repo name: tree-sitter-julia
-Latest commit in repo: 1cd300bda52e680872053cd55a228c1809cb0c3a
+Latest commit in repo: 1145ecee74929a6b75af90d27a8a7bcec4a07067
 Last change in file:
-  commit 22e8889dc3718099e4dd14feb5930e84cf03fbb1
-  Author: Max Brunsfeld <maxbrunsfeld@gmail.com>
-  Date:   Tue Jul 21 10:27:50 2020 -0700
+  commit 1145ecee74929a6b75af90d27a8a7bcec4a07067
+  Author: brandonspark <wu.brandonj@gmail.com>
+  Date:   Wed Aug 16 13:01:17 2023 -0700
   
-      Add mit license file
+      separate identifier from word token
 ---
 File: semgrep-grammars/src/tree-sitter-julia/grammar.js
 Git repo name: tree-sitter-julia
-Latest commit in repo: 1cd300bda52e680872053cd55a228c1809cb0c3a
+Latest commit in repo: 1145ecee74929a6b75af90d27a8a7bcec4a07067
 Last change in file:
-  commit 1cd300bda52e680872053cd55a228c1809cb0c3a
-  Author: Sergio A. Vargas <savargasqu+git@unal.edu.co>
-  Date:   Mon Dec 26 17:45:40 2022 -0500
+  commit 1145ecee74929a6b75af90d27a8a7bcec4a07067
+  Author: brandonspark <wu.brandonj@gmail.com>
+  Date:   Wed Aug 16 13:01:17 2023 -0700
   
-      Update type operators, quotations and other minor fixes (#87)
-      
-      * Type operators
-      - Rename `subtype_clause` to `type_clause`:
-        - Remove subtype operator from `typed_expression`.
-        - Add supertype operator to `type_clause`.
-        - Note that outside definitions, both `<:` and `>:` are parsed as comparison
-          operators.
-      - Add `where_expression`: The rule `where_clause` is still needed because
-        `where` has a different precedence depending on whether it's in a type
-        parameter or if it's a regular expression.
-      
-      * Quotes
-      - Add assignment operators to quote_expression.
-      - Change precedence of colon `:` as identifier.
-      - Parse `primitive type` and `abstract type` as a single token. This enables
-        parsing `primitive` and `abstract` as identifiers.
-      - Add a list of keywords: This enables quoting some keywords without
-        tree-sitter trying to parse their corresponding rule. This can still fail
-        depending on the context, but in most cases it's good enough.
-      
-      * Misc
-      - Add typed parameters to `function_expression`.
-      - Add closed macros to `keyword_parameters` (they're already allowed in regular
-        parameters).
-      - Add assignments to `ternary_expression`.
-      - Remove `generator_expression` and allow a trailing `_comprehension_clause` in
-        any collection.
-      - Fix arrow, prefix and postfix precedences.
-      - Fix pipes names.
+      separate identifier from word token
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: 3834add10c746906fad9b7ced540fc2f981aa08c
+Latest commit in repo: 07e4fbe59ccf75291222f1b806faba89338e8358
 Last change in file:
-  commit 3834add10c746906fad9b7ced540fc2f981aa08c
+  commit d0caf504560b952eb91138f48923c3a13538d0c1
   Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Wed Jul 5 14:00:37 2023 -0400
+  Date:   Thu Aug 17 10:34:42 2023 -0700
   
-      allow ellipsis in catch for julia
+      clarify comments
 ---
