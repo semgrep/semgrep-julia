@@ -1356,6 +1356,12 @@ and map_expression (env : env) (x : CST.expression) =
   | `Semg_ellips tok -> R.Case ("Semg_ellips",
       (* "..." *) token env tok
     )
+  | `Deep_exp (v1, v2, v3) -> R.Case ("Deep_exp",
+      let v1 = (* "<..." *) token env v1 in
+      let v2 = map_expression env v2 in
+      let v3 = (* "...>" *) token env v3 in
+      R.Tuple [v1; v2; v3]
+    )
   )
 
 and map_field_expression (env : env) ((v1, v2, v3) : CST.field_expression) =

@@ -580,6 +580,7 @@ and expression = [
       | `Begin of Token.t (* "begin" *)
     ]
   | `Semg_ellips of Token.t (* "..." *)
+  | `Deep_exp of (Token.t (* "<..." *) * expression * Token.t (* "...>" *))
 ]
 
 and field_expression = (
@@ -1130,6 +1131,10 @@ type comprehension_expression (* inlined *) = (
   * terminator option
   * comprehension_clause
   * Token.t (* "]" *)
+)
+
+type deep_expression (* inlined *) = (
+    Token.t (* "<..." *) * expression * Token.t (* "...>" *)
 )
 
 type function_expression (* inlined *) = (

@@ -2,11 +2,11 @@ File: semgrep-grammars/src/tree-sitter-julia/LICENSE
 Git repo name: tree-sitter-julia
 Latest commit in repo: 1145ecee74929a6b75af90d27a8a7bcec4a07067
 Last change in file:
-  commit 1145ecee74929a6b75af90d27a8a7bcec4a07067
-  Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Wed Aug 16 13:01:17 2023 -0700
+  commit 22e8889dc3718099e4dd14feb5930e84cf03fbb1
+  Author: Max Brunsfeld <maxbrunsfeld@gmail.com>
+  Date:   Tue Jul 21 10:27:50 2020 -0700
   
-      separate identifier from word token
+      Add mit license file
 ---
 File: semgrep-grammars/src/tree-sitter-julia/grammar.js
 Git repo name: tree-sitter-julia
@@ -20,11 +20,11 @@ Last change in file:
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: 07e4fbe59ccf75291222f1b806faba89338e8358
+Latest commit in repo: b8dcc261d043d6cf2735f8929550753d518589ef
 Last change in file:
-  commit d0caf504560b952eb91138f48923c3a13538d0c1
+  commit 204f44b09d31e87c7e5ec432eb92933c0d635bab
   Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Thu Aug 17 10:34:42 2023 -0700
+  Date:   Wed Aug 23 14:20:28 2023 -0700
   
-      clarify comments
+      feat: deep expression operator for julia
 ---

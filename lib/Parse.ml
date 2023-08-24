@@ -635,6 +635,14 @@ let children_regexps : (string * Run.exp option) list = [
       Token (Literal "}");
     ];
   );
+  "deep_expression",
+  Some (
+    Seq [
+      Token (Literal "<...");
+      Token (Name "expression");
+      Token (Literal "...>");
+    ];
+  );
   "do_clause",
   Some (
     Seq [
@@ -807,6 +815,7 @@ let children_regexps : (string * Run.exp option) list = [
         Token (Literal "begin");
       |];
       Token (Name "semgrep_ellipsis");
+      Token (Name "deep_expression");
     |];
   );
   "field_expression",
@@ -3485,6 +3494,20 @@ and trans_curly_expression ((kind, body) : mt) : CST.curly_expression =
       )
   | Leaf _ -> assert false
 
+and trans_deep_expression ((kind, body) : mt) : CST.deep_expression =
+  match body with
+  | Children v ->
+      (match v with
+      | Seq [v0; v1; v2] ->
+          (
+            Run.trans_token (Run.matcher_token v0),
+            trans_expression (Run.matcher_token v1),
+            Run.trans_token (Run.matcher_token v2)
+          )
+      | _ -> assert false
+      )
+  | Leaf _ -> assert false
+
 and trans_do_clause ((kind, body) : mt) : CST.do_clause =
   match body with
   | Children v ->
@@ -3964,6 +3987,10 @@ and trans_expression ((kind, body) : mt) : CST.expression =
       | Alt (1, v) ->
           `Semg_ellips (
             trans_semgrep_ellipsis (Run.matcher_token v)
+          )
+      | Alt (2, v) ->
+          `Deep_exp (
+            trans_deep_expression (Run.matcher_token v)
           )
       | _ -> assert false
       )
