@@ -20,11 +20,11 @@ Last change in file:
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: b8dcc261d043d6cf2735f8929550753d518589ef
+Latest commit in repo: 1a167cfef687a3745d513a3b00a85f16d047c2a0
 Last change in file:
-  commit 204f44b09d31e87c7e5ec432eb92933c0d635bab
+  commit 9eea15cb550d1be1d8880c1d4599fe4b2101f459
   Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Wed Aug 23 14:20:28 2023 -0700
+  Date:   Tue Aug 29 10:41:54 2023 -0700
   
-      feat: deep expression operator for julia
+      fix julia metavars
 ---

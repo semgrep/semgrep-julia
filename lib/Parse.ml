@@ -43,7 +43,7 @@ let children_regexps : (string * Run.exp option) list = [
   "escape_sequence", None;
   "tok_0b_pat_1c3450e", None;
   "command_end", None;
-  "semgrep_ellipsis", None;
+  "semgrep_extended_metavariable", None;
   "tilde_operator", None;
   "arrow_operator", None;
   "immediate_bracket", None;
@@ -61,14 +61,14 @@ let children_regexps : (string * Run.exp option) list = [
   "string_start", None;
   "imm_tok_dot", None;
   "imm_tok_choice_bare", None;
-  "plus_operator", None;
+  "power_operator", None;
   "unary_plus_operator", None;
   "times_operator", None;
   "tok_choice_0x_pat_50ed65e_choice_dot_choice_pat_50ed65e_pat_dd04cb4",
   None;
   "tok_abst_pat_3d340f6_type", None;
   "break_statement", None;
-  "pipe_left_operator", None;
+  "pipe_right_operator", None;
   "tok_dot_pat_a25c544_choice_pat_55159f5", None;
   "tok_0x_pat_50ed65e", None;
   "pair_operator", None;
@@ -76,7 +76,7 @@ let children_regexps : (string * Run.exp option) list = [
   "immediate_brace", None;
   "lazy_and_operator", None;
   "type_order_operator", None;
-  "rational_operator", None;
+  "semgrep_ellipsis", None;
   "boolean_literal",
   Some (
     Alt [|
@@ -84,17 +84,24 @@ let children_regexps : (string * Run.exp option) list = [
       Token (Literal "false");
     |];
   );
-  "pat_aa33ccb", None;
+  "pipe_left_operator", None;
   "tok_rep1_dot", None;
-  "power_operator", None;
   "comparison_operator", None;
-  "pipe_right_operator", None;
+  "plus_operator", None;
   "unary_operator", None;
   "character_literal", None;
   "pat_4aee1e1", None;
   "lazy_or_operator", None;
+  "rational_operator", None;
   "assignment_operator", None;
   "imm_tok_dot_choice_pat_a25c544_choice_pat_55159f5", None;
+  "identifier",
+  Some (
+    Alt [|
+      Token (Name "word_identifier");
+      Token (Name "semgrep_extended_metavariable");
+    |];
+  );
   "integer_literal",
   Some (
     Alt [|
@@ -102,13 +109,6 @@ let children_regexps : (string * Run.exp option) list = [
       Token (Name "tok_0o_pat_c83427c");
       Token (Name "tok_0x_pat_50ed65e");
       Token (Name "pat_a25c544");
-    |];
-  );
-  "identifier",
-  Some (
-    Alt [|
-      Token (Name "word_identifier");
-      Token (Name "pat_aa33ccb");
     |];
   );
   "operator",
@@ -1103,7 +1103,7 @@ let children_regexps : (string * Run.exp option) list = [
           Token (Name "quotable");
         |];
       ];
-      Token (Name "pat_aa33ccb");
+      Token (Name "semgrep_extended_metavariable");
     |];
   );
   "juxtaposition_expression",
@@ -1971,7 +1971,7 @@ let trans_command_end ((kind, body) : mt) : CST.command_end =
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_semgrep_ellipsis ((kind, body) : mt) : CST.semgrep_ellipsis =
+let trans_semgrep_extended_metavariable ((kind, body) : mt) : CST.semgrep_extended_metavariable =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2061,7 +2061,7 @@ let trans_imm_tok_choice_bare ((kind, body) : mt) : CST.imm_tok_choice_bare =
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_plus_operator ((kind, body) : mt) : CST.plus_operator =
+let trans_power_operator ((kind, body) : mt) : CST.power_operator =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2091,7 +2091,7 @@ let trans_break_statement ((kind, body) : mt) : CST.break_statement =
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_pipe_left_operator ((kind, body) : mt) : CST.pipe_left_operator =
+let trans_pipe_right_operator ((kind, body) : mt) : CST.pipe_right_operator =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2131,7 +2131,7 @@ let trans_type_order_operator ((kind, body) : mt) : CST.type_order_operator =
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_rational_operator ((kind, body) : mt) : CST.rational_operator =
+let trans_semgrep_ellipsis ((kind, body) : mt) : CST.semgrep_ellipsis =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2152,7 +2152,7 @@ let trans_boolean_literal ((kind, body) : mt) : CST.boolean_literal =
       )
   | Leaf _ -> assert false
 
-let trans_pat_aa33ccb ((kind, body) : mt) : CST.pat_aa33ccb =
+let trans_pipe_left_operator ((kind, body) : mt) : CST.pipe_left_operator =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2162,17 +2162,12 @@ let trans_tok_rep1_dot ((kind, body) : mt) : CST.tok_rep1_dot =
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_power_operator ((kind, body) : mt) : CST.power_operator =
-  match body with
-  | Leaf v -> v
-  | Children _ -> assert false
-
 let trans_comparison_operator ((kind, body) : mt) : CST.comparison_operator =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
 
-let trans_pipe_right_operator ((kind, body) : mt) : CST.pipe_right_operator =
+let trans_plus_operator ((kind, body) : mt) : CST.plus_operator =
   match body with
   | Leaf v -> v
   | Children _ -> assert false
@@ -2197,6 +2192,11 @@ let trans_lazy_or_operator ((kind, body) : mt) : CST.lazy_or_operator =
   | Leaf v -> v
   | Children _ -> assert false
 
+let trans_rational_operator ((kind, body) : mt) : CST.rational_operator =
+  match body with
+  | Leaf v -> v
+  | Children _ -> assert false
+
 let trans_assignment_operator ((kind, body) : mt) : CST.assignment_operator =
   match body with
   | Leaf v -> v
@@ -2206,6 +2206,22 @@ let trans_imm_tok_dot_choice_pat_a25c544_choice_pat_55159f5 ((kind, body) : mt) 
   match body with
   | Leaf v -> v
   | Children _ -> assert false
+
+let trans_identifier ((kind, body) : mt) : CST.identifier =
+  match body with
+  | Children v ->
+      (match v with
+      | Alt (0, v) ->
+          `Word_id (
+            trans_word_identifier (Run.matcher_token v)
+          )
+      | Alt (1, v) ->
+          `Semg_exte_meta (
+            trans_semgrep_extended_metavariable (Run.matcher_token v)
+          )
+      | _ -> assert false
+      )
+  | Leaf _ -> assert false
 
 let trans_integer_literal ((kind, body) : mt) : CST.integer_literal =
   match body with
@@ -2231,21 +2247,6 @@ let trans_integer_literal ((kind, body) : mt) : CST.integer_literal =
       )
   | Leaf _ -> assert false
 
-let trans_identifier ((kind, body) : mt) : CST.identifier =
-  match body with
-  | Children v ->
-      (match v with
-      | Alt (0, v) ->
-          `Word_id (
-            trans_word_identifier (Run.matcher_token v)
-          )
-      | Alt (1, v) ->
-          `Pat_aa33ccb (
-            trans_pat_aa33ccb (Run.matcher_token v)
-          )
-      | _ -> assert false
-      )
-  | Leaf _ -> assert false
 
 let trans_operator ((kind, body) : mt) : CST.operator =
   match body with
@@ -2314,7 +2315,6 @@ let trans_operator ((kind, body) : mt) : CST.operator =
       | _ -> assert false
       )
   | Leaf _ -> assert false
-
 
 let trans_float_literal ((kind, body) : mt) : CST.float_literal =
   match body with
@@ -4655,8 +4655,8 @@ and trans_interpolation_expression ((kind, body) : mt) : CST.interpolation_expre
             )
           )
       | Alt (1, v) ->
-          `Pat_aa33ccb (
-            trans_pat_aa33ccb (Run.matcher_token v)
+          `Semg_exte_meta (
+            trans_semgrep_extended_metavariable (Run.matcher_token v)
           )
       | _ -> assert false
       )
