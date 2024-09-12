@@ -1269,3 +1269,10 @@ type vector_expression (* inlined *) = (
 type where_expression (* inlined *) = (
     expression * Token.t (* "where" *) * expression
 )
+
+type extra = 
+    Line_comment of Loc.t * line_comment
+  | Block_comment of Loc.t * block_comment
+
+
+type extras = extra list
