@@ -1,6 +1,6 @@
 File: semgrep-grammars/src/tree-sitter-julia/LICENSE
 Git repo name: tree-sitter-julia
-Latest commit in repo: bb7e587837fdeda74dd510256253d60f59a1e2cd
+Latest commit in repo: 87394e7ce3b1aca1a7c7912d2bbc599551591093
 Last change in file:
   commit 22e8889dc3718099e4dd14feb5930e84cf03fbb1
   Author: Max Brunsfeld <maxbrunsfeld@gmail.com>
@@ -10,21 +10,25 @@ Last change in file:
 ---
 File: semgrep-grammars/src/tree-sitter-julia/grammar.js
 Git repo name: tree-sitter-julia
-Latest commit in repo: bb7e587837fdeda74dd510256253d60f59a1e2cd
+Latest commit in repo: 87394e7ce3b1aca1a7c7912d2bbc599551591093
 Last change in file:
-  commit 1145ecee74929a6b75af90d27a8a7bcec4a07067
-  Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Wed Aug 16 13:01:17 2023 -0700
+  commit 5a3c32155f0ea5b2630cd6cd4f786633609bc2bd
+  Author: Sergio Alejandro Vargas <savargasqu+git@unal.edu.co>
+  Date:   Sat Mar 30 21:56:26 2024 -0500
   
-      separate identifier from word token
+      Rename `bare_tuple` to `open_tuple`
 ---
 File: semgrep-grammars/src/semgrep-julia/grammar.js
 Git repo name: ocaml-tree-sitter-semgrep
-Latest commit in repo: 62c59803ce966ac00210b5ed8aa163a926f7eaad
+Latest commit in repo: d56a90e587d198293212a634df2a6a790589b18c
 Last change in file:
-  commit 9eea15cb550d1be1d8880c1d4599fe4b2101f459
-  Author: brandonspark <wu.brandonj@gmail.com>
-  Date:   Tue Aug 29 10:41:54 2023 -0700
+  commit d56a90e587d198293212a634df2a6a790589b18c
+  Author: Sergio Alejandro Vargas <savargasqu+git@unal.edu.co>
+  Date:   Wed Jan 8 18:33:34 2025 -0500
   
-      fix julia metavars
+      Update julia grammar
+      
+      Update the Julia grammar to tree-sitter-julia#135. That PR introduced
+      several breaking changes, including changes in the way function
+      signatures and parameters were parsed.
 ---
